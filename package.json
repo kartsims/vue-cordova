@@ -1,0 +1,25 @@
+{
+  "name": "vue-cordova",
+  "version": "0.0.1",
+  "description": "Vue.js plugin for Cordova",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kartsims/vue-cordova.git"
+  },
+  "keywords": [
+    "vuejs"
+  ],
+  "author": "Simon Tarchichi <kartsims@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartsims/vue-cordova.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cordova",
+    "vuejs",
+    "plugin",
+    "mobile"
+  ]
+}
