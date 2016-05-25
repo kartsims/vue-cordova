@@ -1,6 +1,6 @@
 {
   "name": "vue-cordova",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue.js plugin for Cordova",
   "main": "index.js",
   "scripts": {
