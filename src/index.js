@@ -1,35 +1,27 @@
-import VueCordovaDevice from 'vue-cordova-device'
-
-// plugins individual configuration
-let plugins = {
-
-  // vue-cordova-device
-  device: (Vue) => {
-    Vue.use(VueCordovaDevice)
-  }
-
-}
-
 exports.install = (Vue, options) => {
 
-  // set global Vue.cordova object if it doesn't exist yet
-  Vue.cordova = Vue.cordova || {}
+  // declare global Vue.cordova object
+  Vue.cordova = Vue.cordova || {
+    deviceready: false
+  }
 
   // Cordova events wrapper
   Vue.cordova.on = (eventName, cb) => {
-    document.addEventListener(eventName, cb, false);
+    document.addEventListener(eventName, cb, false)
   }
 
-  // load plugins array
-  if (typeof options.plugins !== 'undefined' && typeof options.plugins.forEach !== 'undefined') {
-    options.plugins.forEach((pluginName) => {
+  // let Vue know that deviceready has been triggered
+  document.addEventListener('deviceready', () => {
+    Vue.cordova.deviceready = true
+  }, false)
 
-      if (typeof plugins[pluginName] === 'undefined') {
-        console.error(`Vuejs Cordova plugin '${pluginName}' doesn't exist`)
-      } else {
-        plugins[pluginName](Vue)
-      }
+  // load supported plugins
+  let pluginsList = [
+    'cordova-plugin-device'
+  ]
+  pluginsList.forEach(pluginName => {
+    let pluginLoaded = require('./plugins/' + pluginName)(Vue, options)
+    console.log('[VueCordova]', pluginName, '→', pluginLoaded ? 'loaded' : 'not loaded')
+  })
 
-    })
-  }
 }
