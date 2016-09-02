@@ -23,13 +23,14 @@ exports.install = (Vue, options) => {
 
   // load supported plugins
   pluginsList.forEach(pluginName => {
-    Vue.cordova.plugins.push
     let plugin = require('./plugins/' + pluginName)
     plugin.install(Vue, options, pluginLoaded => {
       if (pluginLoaded) {
         Vue.cordova.plugins.push(pluginName)
       }
-      console.log('[VueCordova]', pluginName, '→', pluginLoaded ? 'loaded' : 'not loaded')
+      if (Vue.config.debug) {
+        console.log('[VueCordova]', pluginName, '→', pluginLoaded ? 'loaded' : 'not loaded')
+      }
     })
   })
 
