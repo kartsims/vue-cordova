@@ -28,7 +28,11 @@ The package provides a global object `Vue.cordova`
 console.log(Vue.cordova);
 ```
 
-This object provides API for the following [events](#event) and will hold the Cordova [plugins](#plugins) API objects you might be using.
+This object provides API for the following [events](#events) and will hold the Cordova [plugins](#plugins) API objects you might be using.
+
+### Demo
+
+A repository with a [full working demo](https://github.com/kartsims/vue-cordova-demo) is available to help you bootstrap a new project or cherry-pick working code.
 
 ### Setup Cordova
 
@@ -51,35 +55,28 @@ Full list of events and compatibility table [here](https://cordova.apache.org/do
 
 # Plugins
 
-Cordova plugins are also supported by `vue-cordova`. You may load them while calling `Vue.use` :
-
-```javascript
-var Vue = require('vue');
-var VueCordova = require('vue-cordova');
-Vue.use(VueCordova, {
-  plugins: ['device']
-});
-```
+Cordova plugins are also supported by `vue-cordova`. Plugins are automatically spotted and made available in `Vue.cordova.plugins` array.
 
 ### Supported plugins
 
-- [Cordova Device Plugin](https://www.npmjs.com/package/cordova-plugin-device)
+- [Cordova Device Plugin](https://github.com/kartsims/vue-cordova/blob/master/PLUGINS.md#cordova-device-plugin) ([NPM](https://www.npmjs.com/package/cordova-plugin-device))
 
 *More coming soon...*
 
-You may help implementing those awesome plugins ! Create your own Cordova plugin support for Vue by creating a NPM package `vue-cordova-pluginname` and send a PR to this repo :)
+You may help ! See below.
 
-### Cordova Device Plugin
+### Add a new plugin
 
-`Vue.cordova.device` describes the device's hardware and software.
-
-See [plugin's README](https://www.npmjs.com/package/cordova-plugin-device) and [vue-cordova-device](https://www.npmjs.com/package/vue-cordova-device) for more information.
+1. Create a file named by the plugin in the `plugins/` directory
+1. Add your plugin to the list in `src/index.js`
+1. Write a tiny doc in `PLUGINS.MD` and update this `README.md`
+1. PR ;)
 
 # Troubleshooting
 
 ##### My events don't seem to be fired
 
-Cordova documentation isn't obvious on this point but you need to include the following `script` tag in your `www/index.html`.
+Cordova documentation isn't obvious about it but you need to include the following `script` tag in your `www/index.html`.
 
 ```html
 <script src="cordova.js"></script>
