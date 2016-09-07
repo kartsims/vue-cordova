@@ -59,11 +59,9 @@ Cordova plugins are also supported by `vue-cordova`. Plugins are automatically s
 
 ### Supported plugins
 
-- [Cordova Device Plugin](https://github.com/kartsims/vue-cordova/blob/master/PLUGINS.md#cordova-device-plugin) ([NPM](https://www.npmjs.com/package/cordova-plugin-device))
+Plugins information and support list is in [PLUGINS.md](https://github.com/kartsims/vue-cordova/blob/master/PLUGINS.md).
 
-*More coming soon...*
-
-You may help ! See below.
+There are many Cordova plugins out there and you may help us getting them supported ! It's pretty easy, see below.
 
 ### Add a new plugin
 
