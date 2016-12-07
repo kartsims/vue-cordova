@@ -2,7 +2,8 @@
 const pluginsList = [
   'cordova-plugin-camera',
   'cordova-plugin-device',
-  'cordova-plugin-geolocation'
+  'cordova-plugin-geolocation',
+  'cordova-plugin-contacts'
 ]
 
 exports.install = (Vue, options) => {

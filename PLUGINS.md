@@ -75,3 +75,18 @@ Vue.cordova.geolocation.getCurrentPosition((position) => {
   enableHighAccuracy: true
 })
 ```
+
+## Contacts Plugin
+
+> API to access the device's contact database ([NPM](https://www.npmjs.com/package/cordova-plugin-contacts))
+
+The contacts database is made available in `Vue.cordova.contacts`. You may then find a contact or create a new one.
+
+```javascript
+// find contacts
+Vue.cordova.contacts.find(['displayName'], (contacts) => {
+  window.alert('Contacts found : ' + contacts.length)
+}, (error) => {
+  window.alert('FAILED : ' + error.code)
+})
+```
