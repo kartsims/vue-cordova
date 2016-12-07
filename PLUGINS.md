@@ -5,6 +5,7 @@ Here are the **Cordova plugins** you may access by loading `vue-cordova` plugin 
 - [Device Plugin](#device-plugin)
 - [Camera Plugin](#camera-plugin)
 - [Geolocation Plugin](#geolocation-plugin)
+- [Contacts Plugin](#contacts-plugin)
 
 ## Device Plugin
 
