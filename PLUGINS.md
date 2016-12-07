@@ -2,8 +2,9 @@
 
 Here are the **Cordova plugins** you may access by loading `vue-cordova` plugin in your VueJS app.
 
-- [Device Plugin ](#device-plugin)
+- [Device Plugin](#device-plugin)
 - [Camera Plugin](#camera-plugin)
+- [Geolocation Plugin](#geolocation-plugin)
 
 ## Device Plugin
 
@@ -48,11 +49,29 @@ The camera and its API is made available in `Vue.cordova.camera`. The global opt
 
 // take a picture
 Vue.cordova.camera.getPicture((imageURI) => {
-  window.alert('SUCCESS ' + imageURI)
+  window.alert('Photo URI : ' + imageURI)
 }, (message) => {
-  window.alert('FAILED ' + message)
+  window.alert('FAILED : ' + message)
 }, {
   quality: 50,
   destinationType: Vue.cordova.camera.DestinationType.FILE_URI
+})
+```
+
+## Geolocation Plugin
+
+> API to access the device's location ([NPM](https://www.npmjs.com/package/cordova-plugin-geolocation))
+
+The GPS is made available in `Vue.cordova.geolocation`. You may then access the current device's location or watch the current position. See the [original plugin's docs](https://www.npmjs.com/package/cordova-plugin-geolocation).
+
+```javascript
+// get current location
+Vue.cordova.geolocation.getCurrentPosition((position) => {
+  window.alert('Current position : ' + position.coords.latitude + ',' + position.coords.longitude)
+}, (error) => {
+  window.alert('FAILED Error #' + error.code + ' ' + error.message)
+}, {
+  timeout: 1000,
+  enableHighAccuracy: true
 })
 ```

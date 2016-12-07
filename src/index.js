@@ -1,7 +1,8 @@
 // list here all supported plugins
 const pluginsList = [
   'cordova-plugin-camera',
-  'cordova-plugin-device'
+  'cordova-plugin-device',
+  'cordova-plugin-geolocation'
 ]
 
 exports.install = (Vue, options) => {
