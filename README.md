@@ -1,5 +1,7 @@
 [Vue.js](https://vuejs.org/) plugin for [Cordova](https://cordova.apache.org/)
 
+> Note : Compatible with every version of VueJS (1.x and 2.x)
+
 # How to use
 
 Add the NPM package to your project
