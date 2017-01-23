@@ -6,6 +6,7 @@ Here are the **Cordova plugins** you may access by loading `vue-cordova` plugin 
 - [Camera Plugin](#camera-plugin)
 - [Geolocation Plugin](#geolocation-plugin)
 - [Contacts Plugin](#contacts-plugin)
+- [DBMeter Plugin] (#dbmeter-plugin)
 
 ## Device Plugin
 
@@ -90,4 +91,27 @@ Vue.cordova.contacts.find(['displayName'], (contacts) => {
 }, (error) => {
   window.alert('FAILED : ' + error.code)
 })
+```
+
+## DB Meter Plugin
+
+> Plugin to get decibel levels using the microphone ([NPM](https://www.npmjs.com/package/cordova-plugin-dbmeter))
+
+```javascript
+// start listening 
+Vue.cordova.dbmeter.start(function(dB){
+  // success
+  console.log(dB);
+}, function(e){
+  // error
+  console.log('code: ' + e.code + ', message: ' + e.message);
+});
+```
+Or, original plugin places DBMeter in global scope
+```javascript
+DBMeter.start(function(dB){
+  console.log(dB);
+}, function(e){
+  console.log('code: ' + e.code + ', message: ' + e.message);
+});
 ```
