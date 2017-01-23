@@ -93,7 +93,7 @@ Vue.cordova.contacts.find(['displayName'], (contacts) => {
 })
 ```
 
-## DB Meter Plugin
+## DBMeter Plugin
 
 > Plugin to get decibel levels using the microphone ([NPM](https://www.npmjs.com/package/cordova-plugin-dbmeter))
 
