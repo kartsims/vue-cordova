@@ -552,3 +552,35 @@ header {
 	font-size: .6em;
 	margin: 30px 0 0 0;
 }
+
+a.icon {
+  font-size: .8em;
+  display: inline-block;
+  padding-right: 5px;
+	height: 24px;
+	line-height: 24px;
+  border: solid 1px #eee;
+	position: relative;
+	color: #888;
+	border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+  &.npm {
+    background-image: url(../images/npm.png);
+		padding-left: 24px;
+  }
+  &.github {
+    background-image: url(../images/github.png);
+		padding-left: 24px;
+  }
+}
+
+h1 {
+  background: #fff;
+  padding: 1.5em 0 .8em 50px;
+  margin: 0;
+}
