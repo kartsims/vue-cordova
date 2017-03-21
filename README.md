@@ -32,6 +32,8 @@ console.log(Vue.cordova);
 
 This object provides API for the following [events](#events) and will hold the Cordova [plugins](#plugins) API objects you might be using.
 
+> **This library is a syntax helper.** It provides an easier access to the global variables defined by Cordova.
+
 ### Demo
 
 A repository with a [full working demo](https://github.com/kartsims/vue-cordova-demo) is available to help you bootstrap a new project or cherry-pick working code.
