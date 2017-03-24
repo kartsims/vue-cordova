@@ -4,7 +4,7 @@ position: 5
 ---
 
 
-##### "My events don't seem to be fired"
+#### "My events don't seem to be fired"
 
 Cordova documentation isn't obvious about it but you need to include the following `script` tag in your `www/index.html`.
 
@@ -12,7 +12,7 @@ Cordova documentation isn't obvious about it but you need to include the followi
 <script src="cordova.js"></script>
 ```
 
-##### "One of my plugins is not working properly"
+#### "One of my plugins is not working properly"
 
 Did you install the plugin in your Cordova project ?
 
@@ -20,9 +20,9 @@ Did you install the plugin in your Cordova project ?
 cordova plugin add cordova-plugin-device
 ```
 
-##### "The `Vue.cordova.xxx` object is null"
+#### "The `Vue.cordova.xxx` object is null"
 
-You probably need to wait for the `deviceready` event to fire. Keep calm and try to :
+You probably need to wait for the `deviceready` event to fire. Keep calm and wrap your code in an event listener :
 
 ```javascript
 Vue.cordova.on('deviceready', () => {

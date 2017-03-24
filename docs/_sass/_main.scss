@@ -249,7 +249,8 @@ h3 .endpoint {
 
 	.description {
 		color: #aaa;
-		margin-top: -11px;
+		margin-top: -25px;
+    font-size: 1.2em;
 	}
 
 	@media (max-width: $mobile-break) {
@@ -457,9 +458,14 @@ header {
 		@include align-items(center);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
-		img {
-			height: 26px;
-			margin: 0 18px;
+		a {
+			color: #fff;
+      margin-left: 20px;
+			font-family: monospace;
+			font-size: 2.3rem;
+			&:hover {
+				color: inherit;
+			}
 		}
 	}
 
@@ -579,7 +585,7 @@ a.icon {
   }
 }
 
-h1 {
+.main h1 {
   background: #fff;
   padding: 1.5em 0 .8em 50px;
   margin: 0;

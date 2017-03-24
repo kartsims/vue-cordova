@@ -4,10 +4,13 @@ add_url: cordova-plugin-device
 description: Describes the device's hardware and software
 ---
 
+Device information is made available in `Vue.cordova.device`.
 
-Device information is made available in `Vue.cordova.device` :
+###### Sample code
 
-```json
+```javascript
+console.log(Vue.cordova.device)
+/*
 {
   "device": {
     "cordova": "4.2.1",
@@ -20,15 +23,15 @@ Device information is made available in `Vue.cordova.device` :
     "serial": "unknown"
   }
 }
+*/
 ```
-
-Device information will be available only after `deviceready` event is triggered.
-{: .info }
 
 ###### Install
 
 ```bash
 cordova plugin add cordova-plugin-device
 ```
+
+###### Source
 
 <a href="https://www.npmjs.com/package/cordova-plugin-device" target="_blank" class="icon npm">cordova-plugin-device</a>

@@ -40,4 +40,4 @@ A repository with a [full working demo](https://github.com/kartsims/vue-cordova-
 
 ### Documentation
 
-For more information, check out [http://vue-cordova.github.io](http://vue-cordova.github.io)
+For more information, check out [http://kartsims.github.io/vue-cordova](http://kartsims.github.io/vue-cordova)
