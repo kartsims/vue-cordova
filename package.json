@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack --watch",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "install": "npm run build"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
