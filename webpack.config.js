@@ -10,7 +10,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: 'babel',
         query: {
           presets: ['es2015']
         }
@@ -18,7 +18,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['', '.js']
   // },
   // plugins: [
   //   new webpack.optimize.UglifyJsPlugin({minimize: true})
