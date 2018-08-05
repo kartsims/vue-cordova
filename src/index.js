@@ -4,7 +4,6 @@ const pluginsList = [
   'cordova-plugin-device',
   'cordova-plugin-geolocation',
   'cordova-plugin-contacts',
-  'cordova-plugin-chrome-apps-sockets-tcp',
   'cordova-plugin-sms',
   'phonegap-plugin-barcodescanner',
   'cordova-plugin-barcodescanner'

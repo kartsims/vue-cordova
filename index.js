@@ -48,7 +48,7 @@ module.exports =
 	'use strict';
 
 	// list here all supported plugins
-	var pluginsList = ['cordova-plugin-camera', 'cordova-plugin-device', 'cordova-plugin-geolocation', 'cordova-plugin-contacts', 'cordova-plugin-chrome-apps-sockets-tcp', 'cordova-plugin-sms', 'phonegap-plugin-barcodescanner', 'cordova-plugin-barcodescanner'];
+	var pluginsList = ['cordova-plugin-camera', 'cordova-plugin-device', 'cordova-plugin-geolocation', 'cordova-plugin-contacts', 'cordova-plugin-sms', 'phonegap-plugin-barcodescanner', 'cordova-plugin-barcodescanner'];
 
 	exports.install = function (Vue, options) {
 
@@ -90,18 +90,16 @@ module.exports =
 		"./cordova-plugin-barcodescanner.js": 2,
 		"./cordova-plugin-camera": 3,
 		"./cordova-plugin-camera.js": 3,
-		"./cordova-plugin-chrome-apps-sockets-tcp": 4,
-		"./cordova-plugin-chrome-apps-sockets-tcp.js": 4,
-		"./cordova-plugin-contacts": 5,
-		"./cordova-plugin-contacts.js": 5,
-		"./cordova-plugin-device": 6,
-		"./cordova-plugin-device.js": 6,
-		"./cordova-plugin-geolocation": 7,
-		"./cordova-plugin-geolocation.js": 7,
-		"./cordova-plugin-sms": 8,
-		"./cordova-plugin-sms.js": 8,
-		"./phonegap-plugin-barcodescanner": 9,
-		"./phonegap-plugin-barcodescanner.js": 9
+		"./cordova-plugin-contacts": 4,
+		"./cordova-plugin-contacts.js": 4,
+		"./cordova-plugin-device": 5,
+		"./cordova-plugin-device.js": 5,
+		"./cordova-plugin-geolocation": 6,
+		"./cordova-plugin-geolocation.js": 6,
+		"./cordova-plugin-sms": 7,
+		"./cordova-plugin-sms.js": 7,
+		"./phonegap-plugin-barcodescanner": 8,
+		"./phonegap-plugin-barcodescanner.js": 8
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -166,26 +164,6 @@ module.exports =
 	exports.install = function (Vue, options, cb) {
 	  document.addEventListener('deviceready', function () {
 
-	    if (typeof chrome.sockets.tcp === 'undefined') {
-	      return cb(false);
-	    }
-
-	    // pass through the object
-	    Vue.cordova.chromeSocketsTcp = chrome.sockets.tcp;
-
-	    return cb(true);
-	  }, false);
-	};
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-	'use strict';
-
-	exports.install = function (Vue, options, cb) {
-	  document.addEventListener('deviceready', function () {
-
 	    if (typeof navigator.contacts === 'undefined') {
 	      return cb(false);
 	    }
@@ -198,7 +176,7 @@ module.exports =
 	};
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -233,7 +211,7 @@ module.exports =
 	};
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -253,7 +231,7 @@ module.exports =
 	};
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -273,7 +251,7 @@ module.exports =
 	};
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports) {
 
 	'use strict';
